@@ -1,0 +1,11 @@
+rpc
+filter
+add rule layer=um actiontype=permit
+add condition field=if_uuid matchtype=equal data=a8e0653c-2744-4389-a61d-7373df8b2292
+add condition field=auth_type matchtype=equal data=16
+add condition field=auth_level matchtype=equal data=6
+add filter
+add rule layer=um actiontype=block
+add condition field=if_uuid matchtype=equal data=a8e0653c-2744-4389-a61d-7373df8b2292
+add filter
+quit

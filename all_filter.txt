@@ -1,0 +1,51 @@
+rpc
+filter
+add rule layer=um actiontype=permit
+add condition field=if_uuid matchtype=equal data=4FC742E0-4A10-11CF-8273-00AA004AE673
+add condition field=auth_type matchtype=equal data=16
+add condition field=auth_level matchtype=equal data=6
+add filter
+add rule layer=um actiontype=block
+add condition field=if_uuid matchtype=equal data=4FC742E0-4A10-11CF-8273-00AA004AE673
+add filter
+add rule layer=um actiontype=permit
+add condition field=if_uuid matchtype=equal data=c681d488-d850-11d0-8c52-00c04fd90f7e
+add condition field=auth_type matchtype=equal data=16
+add condition field=auth_level matchtype=equal data=6
+add filter
+add rule layer=um actiontype=block
+add condition field=if_uuid matchtype=equal data=c681d488-d850-11d0-8c52-00c04fd90f7e
+add filter
+add rule layer=um actiontype=permit
+add condition field=if_uuid matchtype=equal data=df1941c5-fe89-4e79-bf10-463657acf44d
+add condition field=auth_type matchtype=equal data=16
+add condition field=auth_level matchtype=equal data=6
+add filter
+add rule layer=um actiontype=block
+add condition field=if_uuid matchtype=equal data=df1941c5-fe89-4e79-bf10-463657acf44d
+add filter
+add rule layer=um actiontype=permit
+add condition field=if_uuid matchtype=equal data=a8e0653c-2744-4389-a61d-7373df8b2292
+add condition field=auth_type matchtype=equal data=16
+add condition field=auth_level matchtype=equal data=6
+add filter
+add rule layer=um actiontype=block
+add condition field=if_uuid matchtype=equal data=a8e0653c-2744-4389-a61d-7373df8b2292
+add filter
+add rule layer=um actiontype=permit
+add condition field=if_uuid matchtype=equal data=12345678-1234-ABCD-EF00-0123456789AB
+add condition field=remote_user_token matchtype=equal data=D:(A;;CC;;;DA)
+add condition field=auth_level matchtype=equal data=6
+add filter
+add rule layer=um actiontype=block
+add condition field=if_uuid matchtype=equal data=12345678-1234-ABCD-EF00-0123456789AB
+add filter
+add rule layer=um actiontype=permit
+add condition field=if_uuid matchtype=equal data=76F03F96-CDFD-44FC-A22C-64950A001209
+add condition field=remote_user_token matchtype=equal data=D:(A;;CC;;;DA)
+add condition field=auth_level matchtype=equal data=6
+add filter
+add rule layer=um actiontype=block
+add condition field=if_uuid matchtype=equal data=76F03F96-CDFD-44FC-A22C-64950A001209
+add filter
+quit

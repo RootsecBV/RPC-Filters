@@ -1,0 +1,20 @@
+rpc
+filter
+add rule layer=um actiontype=permit
+add condition field=if_uuid matchtype=equal data=12345678-1234-ABCD-EF00-0123456789AB
+add condition field=remote_user_token matchtype=equal data=D:(A;;CC;;;DA)
+add condition field=auth_level matchtype=equal data=6
+add filter
+add rule layer=um actiontype=block
+add condition field=if_uuid matchtype=equal data=12345678-1234-ABCD-EF00-0123456789AB
+add filter
+add rule layer=um actiontype=permit
+add condition field=if_uuid matchtype=equal data=76F03F96-CDFD-44FC-A22C-64950A001209
+add condition field=remote_user_token matchtype=equal data=D:(A;;CC;;;DA)
+add condition field=auth_level matchtype=equal data=6
+add filter
+add rule layer=um actiontype=block
+add condition field=if_uuid matchtype=equal data=76F03F96-CDFD-44FC-A22C-64950A001209
+add filter
+quit
+
